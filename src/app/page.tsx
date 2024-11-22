@@ -106,7 +106,8 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             </h2>
             <p className="text-gray-600">
               In unserer Praxis unterstützen wir Einzelpersonen, Paare, Kinder,
-              Jugendliche und Familien in schwierigen Lebenssituationen dabei,
+              Jugendliche und Familien in schwierigen Lebenssituationen dabei,{" "}
+
               <strong>Kraft</strong>, <strong>Vertrauen </strong>und{" "}
               <strong>Klarheit</strong> zu finden, um neue Wege zu gehen. Wenn
               Sie sich persönlich weiterentwickeln oder ihre Lebensqualität
@@ -131,7 +132,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             </p>
           </div>
         </div>
-        <div className="w-full mx-auto bg-white">
+        <div  id="angebote" className="w-full mx-auto bg-white">
           <section className="px-8 mt-8 max-w-[900px] m-auto py-24">
             <h2 className="text-4xl font-extrabold text-[#e6bc6d]">Angebote</h2>
             <div className="mt-4">
@@ -160,7 +161,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             </div>
           </section>
         </div>
-        <div className="max-w-[900px] mx-auto py-16">
+        <div id="preise" className="max-w-[900px] mx-auto py-16">
           <div className="text-left px-8 mt-8 flex flex-col gap-5">
             <h2 className=" text-[#e6bc6d] text-4xl font-extrabold tracking-tight lg:text-4xl">
               Kosten & Erstattung
@@ -210,10 +211,10 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
         </div>
         <div className="w-full mx-auto py-16 bg-white">
           <div className="text-left px-8 m-auto mt-8 flex flex-col gap-5 max-w-[900px]">
-            <h2 className=" text-[#e6bc6d] text-4xl font-extrabold tracking-tight lg:text-4xl">
+            <h2 className=" text-[#e6bc6d] text-3xl font-extrabold tracking-tight lg:text-4xl">
               Literaturempfehlungen
             </h2>
-            <h4>Für Paare</h4>
+            <h3 className="text-2xl">Für Paare</h3>
             <ul>
               <li>
                 <strong>John Gottman (2003):</strong>{" "}
@@ -260,7 +261,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
                 Herder Verlag Freiburg
               </li>
             </ul>
-            <h4>Für Eltern</h4>
+            <h3 className="text-2xl">Für Eltern</h3>
 
             <ul>
               <li>
@@ -271,7 +272,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             </ul>
           </div>
         </div>
-        <Contact />
+        <Contact  />
       </main>
       <Footer />
     </div>
