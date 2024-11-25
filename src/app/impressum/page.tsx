@@ -20,7 +20,7 @@ export default function Impressum() {
               <p className="mb-2 font-semibold">
                 Andrea Kompatzki / Dr. Levent Gülfirat
               </p>
-              <p>Praxis "dritter Weg"</p>
+              <p>Praxis Perspektivwechsel</p>
               <div className="mt-4 space-y-2">
                 <p>
                   <span className="font-semibold">Telefon:</span> 01778382423 /
