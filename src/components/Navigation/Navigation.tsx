@@ -40,7 +40,7 @@ export default function Navigation() {
       </NavigationMenu>
       <Sheet>
         <SheetTrigger className="flex lg:hidden absolute right-3 top-2">
-          <img src="/svg/menu.svg" height={30} width={30} />
+          <img src="/svg/menu.svg" height={30} width={30} alt="menu" />
         </SheetTrigger>
         <SheetContent className="bg-[#faebd7] flex flex-col items-center justify-center">
           <SheetHeader>
