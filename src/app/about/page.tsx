@@ -66,8 +66,8 @@ export default function About() {
             ÜBER UNS
           </h1>
 
-          {people.map((person) => (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10 items-start">
+          {people.map((person, index) => (
+           <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10 items-start">
               <div className="flex justify-center">
                 <Image
                   src={person.image}
