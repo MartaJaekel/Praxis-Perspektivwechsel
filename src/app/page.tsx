@@ -16,7 +16,7 @@ export default function Home() {
       title: "Einzelberatung und Therapie Paarberatung",
 
       content:
-        "Sie suchen nach neuen Lösungswegen und wollen etwas in Ihrem Leben verändern? In der Einzeltherapie bieten wir Ihnen Hilfe bei der Bewältigung von persönlichen Lebenskrisen, Ängsten und Konflikten. Wir beraten Sie auch bei Partnerschaftsproblemen, familiären Schwierigkeiten und Erziehungsfragen. In unserer gemeinsamen Arbeit unterstützen wir Sie beim Finden und Erleben von neuen Perspektiven, wenn Sie das Gefühl haben, sich in einer Sackgasse zu befinden und kein Licht mehr am Ende des Tunnels sehen... Wir stehen Ihnen hilfreich zur Seite beim Finden von Auswegen, wenn Sie sich erschöpft fühlen und mehr innere Balance, Wohlbefinden und verbesserte Leistungsfähigkeit erreichen wollen.  ",
+        "Sie suchen nach neuen Lösungswegen und Sie haben den Wunsch etwas in ihrem Leben zu verändern? In der Einzeltherapie bieten wir Ihnen Hilfe bei der Bewältigung von persönlichen Lebenskrisen, Ängsten und Konflikten. Wir beraten Sie auch bei Partnerschaftsproblemen, familiären Schwierigkeiten und Erziehungsfragen. In unserer gemeinsamen Arbeit unterstützen wir Sie beim Finden und Erleben von neuen Perspektiven, wenn Sie das Gefühl haben, sich in einer Sackgasse zu befinden und kein Licht mehr am Ende des Tunnels sehen... Wir stehen Ihnen hilfreich zur Seite beim Finden von Auswegen, wenn Sie sich erschöpft fühlen und mehr innere Balance, Wohlbefinden und verbesserte Leistungsfähigkeit erreichen wollen.  ",
       image: "/images/vertrauen.webp",
     },
     {
@@ -33,7 +33,7 @@ export default function Home() {
 
     Ziel der Paarberatung oder Paartherapie kann auch sein, den Weg von Trennung oder Scheidung (TUB - Trennungs- und Umgangsberatung) in respektvollem Umgang zu gehen und verantwortungsvolle Eltern zu bleiben.
 `,
-      image: "/images/puzzle.webp",
+      image: "/images/puzzle.jpg",
     },
     {
       title: "Familientherapie",
@@ -92,9 +92,9 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             <p className=" font-serif text-lg leading-6 text-[#595959] italic ">
               Jedes Ding hat drei Seiten: eine, die Du siehst, eine, die ich
               sehe und eine, die wir beide nicht sehen. <br />
-              <p className="mt-4">
+              <span className="mt-4">
                 <strong>Chinesische Weisheit</strong>
-              </p>
+              </span>
             </p>
           </div>
         </div>
@@ -112,9 +112,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
               <strong>Klarheit</strong> zu finden, um neue Wege zu gehen. Wenn
               Sie sich persönlich weiterentwickeln oder ihre Lebensqualität
               verbessern möchten, stehen wir ihnen gern als Beraterin/Berater
-              oder Therapeutin / Therapeut zur Seite. Unsere Settings finden in
-              Co-Team statt und bei Bedarf auch mit einem
-              Beraterin/Berater-Therapeutin / Therapeut.{" "}
+              oder Therapeutin / Therapeut zur Seite. Unsere Settings finden mit einer/einem BeraterIn/TherapeutIn statt.{" "}
             </p>
             <p>
               {" "}
@@ -140,9 +138,11 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
                 <div key={index} className="mb-2 border-b border-gray-300">
                   <div
                     onClick={() => toggleAccordion(index)}
-                    className=" relative w-full text-left text-grey py-4 text-lg font-semibold"
+                    className=" relative w-full text-left  py-4   font-semibold"
                   >
+                    <p className="text-grey text-xl  ">
                     {service.title}
+                    </p>
                     <img
                       src="/svg/plus.svg"
                       height={20}
