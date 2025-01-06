@@ -59,7 +59,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
 
 ​
 `,
-      image: "/images/kind.webp",
+      image: "/images/kinder.jpg",
     },
     {
       title: "Coaching",
@@ -73,7 +73,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
     
     Beim Coaching entwickeln wir Strategien, um Ihre Leistungsfähigkeit und Arbeitszufriedenheit zu erhalten oder wiederzuerlangen.
 `,
-      image: "/images/garn.webp",
+      image: "/images/coaching.png",
     },
   ];
   return (
