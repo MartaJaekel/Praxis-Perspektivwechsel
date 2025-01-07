@@ -140,7 +140,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
                     onClick={() => toggleAccordion(index)}
                     className=" relative w-full text-left  py-4   font-semibold"
                   >
-                    <p className="text-grey text-xl break-words  ">
+                    <p className="text-grey text-[1.1rem]">
                     {service.title}
                     </p>
                     <img
@@ -198,7 +198,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
               </li>
               <li>
                 <strong>Familientherapie 90 Minuten:</strong> 210 Euro - inkl.
-                Mwst. (zwei Berater /Therapeuten)
+                Mwst. (zwei Berater/Therapeuten)
               </li>
             </ul>
             <p>

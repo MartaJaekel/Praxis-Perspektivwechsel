@@ -12,14 +12,14 @@ const people = [
           (Diplom) mit den Nebenfächern Psychologie und Soziologie studiert.
           Seit Abschluss meines Studiums arbeite ich bei unterschiedlichen
           Trägern der sozialen Arbeit mit Kindern, Jugendlichen, Erwachsenen und
-          Familien und als <strong>Familientherapeutin</strong>.
+          Familien und als Familientherapeutin.
         </p>
         <p>
           Am Context Institut für systemische Beratung und Therapie habe ich
-          2013 meine Ausbildung zur <strong>systemischen Therapeutin</strong>{" "}
+          2013 meine Ausbildung zur systemischen Therapeutin{" "}
           für Einzelne, Paare und Familien abgeschlossen. Beim Gesundheitsamt
           Tempelhof-Schöneberg habe ich die Prüfung zum{" "}
-          <strong> HP für Psychotherapie</strong>
+          HP für Psychotherapie.
           abgelegt.
         </p>
       </>
