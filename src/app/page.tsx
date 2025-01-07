@@ -140,7 +140,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
                     onClick={() => toggleAccordion(index)}
                     className=" relative w-full text-left  py-4   font-semibold"
                   >
-                    <p className="text-grey text-[1.1rem]">
+                    <p className="text-grey text">
                     {service.title}
                     </p>
                     <img
@@ -209,10 +209,10 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             </p>
           </div>
         </div>
-        <div className="mx-auto py-8 bg-white">
-          <div className="text-left px-8 m-auto mt-8 flex flex-col gap-5">
-            <h2 className=" text-[#e6bc6d] text-[1.6rem] font-extrabold tracking-tight lg:text-4xl">
-              Literaturempfehlungen
+        <div className="w-full mx-auto py-16 bg-white">
+          <div className="text-left px-8 m-auto mt-8 flex flex-col gap-5 max-w-[900px]">
+            <h2 className=" text-[#e6bc6d] text-[2rem] font-extrabold tracking-tight lg:text-4xl break-words">
+            Literatur<wbr />-empfehlungen
             </h2>
             <h3 className="text-[1.3rem]">Für Paare</h3>
             <ul>
