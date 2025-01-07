@@ -131,7 +131,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
           </div>
         </div>
         <div id="angebote" className="w-full mx-auto bg-white">
-          <section className="px-8 mt-8 max-w-[900px] m-auto py-24">
+          <section className="px-[1.5rem] mt-8 max-w-[900px] m-auto py-24">
             <h2 className="text-4xl font-extrabold text-[#e6bc6d]">Angebote</h2>
             <div className="mt-4">
               {services.map((service, index) => (
