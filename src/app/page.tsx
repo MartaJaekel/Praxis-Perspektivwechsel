@@ -107,12 +107,12 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             <p className="text-gray-600">
               In unserer Praxis unterstützen wir Einzelpersonen, Paare, Kinder,
               Jugendliche und Familien in schwierigen Lebenssituationen dabei,{" "}
-
               <strong>Kraft</strong>, <strong>Vertrauen </strong>und{" "}
               <strong>Klarheit</strong> zu finden, um neue Wege zu gehen. Wenn
               Sie sich persönlich weiterentwickeln oder ihre Lebensqualität
               verbessern möchten, stehen wir ihnen gern als Beraterin/Berater
-              oder Therapeutin / Therapeut zur Seite. Unsere Settings finden mit einer/einem BeraterIn/TherapeutIn statt.{" "}
+              oder Therapeutin / Therapeut zur Seite. Unsere Settings finden mit
+              einer/einem BeraterIn/TherapeutIn statt.{" "}
             </p>
             <p>
               {" "}
@@ -130,7 +130,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             </p>
           </div>
         </div>
-        <div  id="angebote" className="w-full mx-auto bg-white">
+        <div id="angebote" className="w-full mx-auto bg-white">
           <section className="px-8 mt-8 max-w-[900px] m-auto py-24">
             <h2 className="text-4xl font-extrabold text-[#e6bc6d]">Angebote</h2>
             <div className="mt-4">
@@ -138,11 +138,9 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
                 <div key={index} className="mb-2 border-b border-gray-300">
                   <div
                     onClick={() => toggleAccordion(index)}
-                    className=" relative w-full text-left  py-4   font-semibold"
+                    className=" relative w-full text-left  py-4 font-semibold"
                   >
-                    <p className="text-grey break-words">
-                    {service.title}
-                    </p>
+                    <p className="text-grey break-words text-[1rem] lg:text-[1.5rem]">{service.title}</p>
                     <img
                       src="/svg/plus.svg"
                       height={20}
@@ -212,7 +210,9 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
         <div className="w-full mx-auto py-16 bg-white">
           <div className="text-left px-8 m-auto mt-8 flex flex-col gap-5 max-w-[900px]">
             <h2 className=" text-[#e6bc6d] text-[2rem] font-extrabold tracking-tight lg:text-4xl break-words">
-            Literatur<wbr />-empfehlungen
+              Literatur
+              <wbr />
+              -empfehlungen
             </h2>
             <h3 className="text-[1.3rem]">Für Paare</h3>
             <ul>
@@ -272,7 +272,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             </ul>
           </div>
         </div>
-        <Contact  />
+        <Contact />
       </main>
       <Footer />
     </div>
