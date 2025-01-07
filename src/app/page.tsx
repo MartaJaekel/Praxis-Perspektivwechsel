@@ -140,7 +140,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
                     onClick={() => toggleAccordion(index)}
                     className=" relative w-full text-left  py-4   font-semibold"
                   >
-                    <p className="text-grey text-xl  ">
+                    <p className="text-grey text-xl break-words  ">
                     {service.title}
                     </p>
                     <img
