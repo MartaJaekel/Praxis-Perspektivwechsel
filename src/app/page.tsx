@@ -209,8 +209,8 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
             </p>
           </div>
         </div>
-        <div className="w-full mx-auto py-16 bg-white">
-          <div className="text-left px-8 m-auto mt-8 flex flex-col gap-5 max-w-[900px]">
+        <div className="mx-auto py-8 bg-white">
+          <div className="text-left px-8 m-auto mt-8 flex flex-col gap-5">
             <h2 className=" text-[#e6bc6d] text-[1.6rem] font-extrabold tracking-tight lg:text-4xl">
               Literaturempfehlungen
             </h2>
