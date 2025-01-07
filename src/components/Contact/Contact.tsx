@@ -95,7 +95,7 @@ export default function Contact() {
         {/* Map */}
         <div className="w-full">
           <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6279.091099528146!2d13.322961577305904!3d52.46798317204764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8507f27eddf6f%3A0xd6ba64517dd1896f!2sOdenwaldstra%C3%9Fe%2023%2C%2012161%20Berlin!5e1!3m2!1sde!2sde!4v1736248439006!5m2!1sde!2sde"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4861.234987695652!2d13.322962698623302!3d52.467954481341756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8507f27eddf6f%3A0xd6ba64517dd1896f!2sOdenwaldstra%C3%9Fe%2023%2C%2012161%20Berlin!5e0!3m2!1sde!2sde!4v1736255700820!5m2!1sde!2sde"
             width="100%"
             height="400"
             loading="lazy"
