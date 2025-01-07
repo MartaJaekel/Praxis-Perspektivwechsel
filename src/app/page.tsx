@@ -211,10 +211,10 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
         </div>
         <div className="w-full mx-auto py-16 bg-white">
           <div className="text-left px-8 m-auto mt-8 flex flex-col gap-5 max-w-[900px]">
-            <h2 className=" text-[#e6bc6d] text-3xl font-extrabold tracking-tight lg:text-4xl">
+            <h2 className=" text-[#e6bc6d] text-[1.6rem] font-extrabold tracking-tight lg:text-4xl">
               Literaturempfehlungen
             </h2>
-            <h3 className="text-2xl">Für Paare</h3>
+            <h3 className="text-[1.3rem]">Für Paare</h3>
             <ul>
               <li>
                 <strong>John Gottman (2003):</strong>{" "}
