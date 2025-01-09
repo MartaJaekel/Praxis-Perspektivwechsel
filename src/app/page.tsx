@@ -13,7 +13,7 @@ export default function Home() {
 
   const services = [
     {
-      title: "Einzelberatung und Therapie Paarberatung",
+      title: "Einzeltherapie und Beratung",
 
       content:
         "Sie suchen nach neuen Lösungswegen und Sie haben den Wunsch etwas in ihrem Leben zu verändern? In der Einzeltherapie bieten wir Ihnen Hilfe bei der Bewältigung von persönlichen Lebenskrisen, Ängsten und Konflikten. Wir beraten Sie auch bei Partnerschaftsproblemen, familiären Schwierigkeiten und Erziehungsfragen. In unserer gemeinsamen Arbeit unterstützen wir Sie beim Finden und Erleben von neuen Perspektiven, wenn Sie das Gefühl haben, sich in einer Sackgasse zu befinden und kein Licht mehr am Ende des Tunnels sehen... Wir stehen Ihnen hilfreich zur Seite beim Finden von Auswegen, wenn Sie sich erschöpft fühlen und mehr innere Balance, Wohlbefinden und verbesserte Leistungsfähigkeit erreichen wollen.  ",

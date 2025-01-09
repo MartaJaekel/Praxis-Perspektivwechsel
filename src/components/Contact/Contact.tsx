@@ -20,12 +20,13 @@ export default function Contact() {
           Wir freuen uns auf Ihren Anruf oder auf Ihre Mail.
         </p>
         <h3 className="font-semibold text-[#FFFFFF]">Andrea Kompatzki</h3>
-        <p className="text-[#FFFFFF]">Tel: 0176 620 44 620</p>
-        <p className="mb-4 text-[#FFFFFF]">E-mail: andrea.kompatzki@web.de</p>
+        <p className="text-[#FFFFFF]">Tel: 0177 838 2423
+        </p>
+        <p className="mb-4 text-[#FFFFFF]">E-mail: andrea.kompatzki@praxis-perspektivwechsel.berlin</p>
 
         <h3 className="font-semibold text-[#FFFFFF]">Levent Gülfirat</h3>
         <p className="text-[#FFFFFF]">Tel: 0177 939 0564</p>
-        <p className="mb-4 text-[#FFFFFF]">E-mail: guelfirat@yahoo.de</p>
+        <p className="mb-4 text-[#FFFFFF]">E-mail: guelfirat@praxis-perspektivwechsel.berlin</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4  lg:mt-48">
           <div className="flex flex-col">

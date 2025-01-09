@@ -16,11 +16,9 @@ const people = [
         </p>
         <p>
           Am Context Institut für systemische Beratung und Therapie habe ich
-          2013 meine Ausbildung zur systemischen Therapeutin{" "}
-          für Einzelne, Paare und Familien abgeschlossen. Beim Gesundheitsamt
-          Tempelhof-Schöneberg habe ich die Prüfung zum{" "}
-          HP für Psychotherapie.
-          abgelegt.
+          2013 meine Ausbildung zur systemischen Therapeutin für Einzelne, Paare
+          und Familien abgeschlossen. Beim Gesundheitsamt Tempelhof-Schöneberg
+          habe ich die Prüfung zum HP für Psychotherapie. abgelegt.
         </p>
       </>
     ),
@@ -38,8 +36,13 @@ const people = [
           Familien.
         </p>
         <p>
-        Meine Ausbildung zum Systemischen Kinder- und Jugendlichentherapeuten habe ich bei der GST (Gesellschaft für systemische Therapie und Beratung) abgeschlossen. Meine Ausbildung  zum Familienratkoordinator habe ich beim Jakus e.V. und meine Ausbildung zur Fachkarft für Kinderschutz (IseF) am SFBB (Sozialpädagogisches Fortbildungsintitut Berlin Brandenburg) absolviert. 
- 
+          Meine Ausbildung zum Systemischen Kinder- und Jugendlichentherapeuten
+          habe ich bei der GST (Gesellschaft für systemische Therapie und
+          Beratung) abgeschlossen. Meine Ausbildung zum Familienratkoordinator
+          habe ich beim Jakus e.V. und meine Ausbildung zur Fachkarft für
+          Kinderschutz (IseF) am SFBB (Sozialpädagogisches Fortbildungsintitut
+          Berlin Brandenburg) absolviert. Die Ausbildung zum systemischen
+          Berater und Therapeut habe ich bei der INSA-Berlin GmbH abgeschlossen.
         </p>
       </>
     ),
@@ -67,7 +70,10 @@ export default function About() {
           </h1>
 
           {people.map((person, index) => (
-           <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10 items-start">
+            <div
+              key={index}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-10 items-start"
+            >
               <div className="flex justify-center">
                 <Image
                   src={person.image}

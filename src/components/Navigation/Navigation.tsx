@@ -30,7 +30,7 @@ export default function Navigation() {
 
   return (
     <header className="flex justify-between w-full p-8">
-      <h1 className="text-2xl text-gray-800 text-left lg:text-3xl">
+      <h1 className="text-2xl text-gray-800 text-left md:text-3xl lg:text-3xl">
         Praxis <br /> PERSPEKTIVWECHSEL
       </h1>
       <NavigationMenu className="hidden md:hidden lg:flex">
