@@ -90,13 +90,15 @@ export default function Contact() {
             </p>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-40">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-20 md:mt-30">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
                 <div className="flex flex-col ">
                   <label className="text-sm font-semibold text-[#FFEEDB] mb-1">
                     Namen eingeben *
                   </label>
                   <Input
+                    id="name"
+                    aria-label="Namen eingeben"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="focus-visible:ring-transparent border-b border-gray-300 border-l-0 border-r-0 border-t-0 p-2 bg-transparent rounded-none placeholder-gray-400 focus:border-b focus:border-[#FFEEDB] text-[#FFEEDB]"
@@ -109,6 +111,8 @@ export default function Contact() {
                     E-Mail-Adresse eingeben *
                   </label>
                   <Input
+                    id="email"
+                    aria-label="Email eingeben"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -122,6 +126,8 @@ export default function Contact() {
                   Betreff *
                 </label>
                 <Input
+                  id="betreff"
+                  aria-label="Betreff eingeben"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
                   className="focus-visible:ring-transparent border-b border-gray-300 border-l-0 border-r-0 border-t-0 p-2 bg-transparent rounded-none placeholder-gray-400 focus:border-b focus:border-[#FFEEDB] text-[#FFEEDB] lg:mt-10"
@@ -130,10 +136,15 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col mt-6">
-                <label className="text-sm font-semibold text-[#FFEEDB] mb-1">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-semibold text-[#FFEEDB] mb-1"
+                >
                   Nachricht eingeben *
                 </label>
                 <Textarea
+                  id="message"
+                  aria-label="Nachricht eingeben"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="focus-visible:ring-transparent border-b border-gray-300 border-l-0 border-r-0 border-t-0 p-2 bg-transparent rounded-none placeholder-gray-400 focus:border-b focus:border-[#FFEEDB] text-[#FFEEDB] lg:mt-10"
@@ -175,7 +186,7 @@ export default function Contact() {
           <div className="lg:w-1/2 flex flex-col gap-8">
             {/* Address Information */}
             <div className="flex flex-col p-4">
-              <h2 className="text-2xl text-[#FFEEDB] mb-4">ADRESSE</h2>
+                <h2 className="text-2xl text-[#fafafa] mb-4 font-extrabold">ADRESSE</h2>
               <p className="text-lg text-[#FFEEDB] flex items-center gap-2 mb-2">
                 Praxis Samson
               </p>
@@ -205,6 +216,7 @@ export default function Contact() {
             {/* Map */}
             <div className="w-full">
               <iframe
+                title="Google Maps"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4861.234987695652!2d13.322962698623302!3d52.467954481341756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8507f27eddf6f%3A0xd6ba64517dd1896f!2sOdenwaldstra%C3%9Fe%2023%2C%2012161%20Berlin!5e0!3m2!1sde!2sde!4v1736255700820!5m2!1sde!2sde"
                 width="100%"
                 height="400"
