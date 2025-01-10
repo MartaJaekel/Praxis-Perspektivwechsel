@@ -127,27 +127,26 @@ export default function Contact() {
             {/* Status Message */}
           </div>
           {showModal && (
-            <div
+        <div
+          onClick={() => setShowModal(false)}
+          className="fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50"
+        >
+          <div className="bg-white p-8 rounded-lg shadow-lg m-4 max-w-md w-full">
+            <h2 className="text-2xl font-bold text-[#5a6e58] mb-4">
+              Vielen Dank für Ihre Nachricht!
+            </h2>
+            <p className="text-lg text-[#5a6e58]">
+              Wir werden uns so schnell wie möglich bei Ihnen melden.
+            </p>
+            <Button
               onClick={() => setShowModal(false)}
-              className="fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50 "
+              className="bg-[#5a6e58] hover:bg-[#4c5c4c] text-white py-2 px-6 rounded mt-8"
             >
-              <div className="bg-white p-8 rounded-lg shadow-lg m-4">
-                <h2 className="text-2xl font-bold text-[#5a6e58] mb-4">
-                  Vielen Dank für Ihre Nachricht!
-                </h2>
-                <p className="text-lg text-[#5a6e58]">
-                  Wir werden uns so schnell wie möglich bei Ihnen melden.
-                </p>
-                <Button
-                  onClick={() => setShowModal(false)}
-                  className="bg-[#5a6e58] hover:bg-[#4c5c4c] text-white py-2 px-6 rounded mt-8"
-                >
-                  SCHLIESSEN
-                </Button>
-              </div>
-            </div>
-          )}
-
+              SCHLIESSEN
+            </Button>
+          </div>
+        </div>
+      )}
           {/* Address and Map */}
           <div className="lg:w-1/2 flex flex-col gap-8">
             {/* Address Information */}
