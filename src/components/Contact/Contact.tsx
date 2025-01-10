@@ -2,6 +2,19 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Script from "next/script";
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (callback: () => void) => void;
+      execute: (
+        siteKey: string,
+        options: { action: string }
+      ) => Promise<string>;
+    };
+  }
+}
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -13,32 +26,44 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    window.grecaptcha.ready(function () {
+      window.grecaptcha
+        .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!, {
+          action: "submit",
+        })
+        .then(async function (token: string) {
+          const formData = { name, email, message, subject, token };
+          // Send the form data to the backend API
+          const response = await fetch("/api/send", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
 
-    const formData = { name, email, message, subject };
-
-    // Send the form data to the backend API
-    const response = await fetch("/api/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
+          if (response.ok) {
+            setShowModal(true);
+            // Optionally reset the form
+            setName("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+          } else {
+            setStatus(
+              "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+            );
+          }
+        });
     });
-
-    if (response.ok) {
-      setShowModal(true);
-      // Optionally reset the form
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-    } else {
-      setStatus("Error sending message. Please try again.");
-    }
   };
 
   return (
     <section id="kontakt" className="p-8 lg:p-32 bg-[#c56b00] gap-8">
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+        strategy="afterInteractive"
+      />
       <div>
         <h2 className="text-2xl text-left md:text-4xl text-white font-bold mb-8 lg:text-5xl">
           KONTAKTIEREN SIE UNS
@@ -115,7 +140,7 @@ export default function Contact() {
                   required
                 />
               </div>
-
+              {status && <p className="text-white text-sm mt-4">{status}</p>}
               <Button
                 type="submit"
                 className="bg-[#5a6e58] hover:bg-[#4c5c4c] text-white py-2 px-6 rounded mt-8"
@@ -123,8 +148,6 @@ export default function Contact() {
                 EINREICHEN
               </Button>
             </form>
-
-            {/* Status Message */}
           </div>
           {showModal && (
             <div

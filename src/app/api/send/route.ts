@@ -5,7 +5,43 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   try {
     // Parse the incoming JSON body
-    const { name, email, message, subject } = await request.json();
+    const { name, email, message, subject, token } = await request.json();
+
+    // verify the token
+    const {
+      success,
+      score,
+    }: {
+      success: boolean;
+      score: number;
+    } = await fetch(
+      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+      {
+        method: "POST",
+      }
+    ).then((res) => {
+      return res.json();
+    });
+
+    if (!success) {
+      console.error("Error verifying token");
+      return new Response(
+        JSON.stringify({
+          error: "Error verifying token",
+        }),
+        { status: 500 }
+      );
+    }
+
+    if (score < 0.5) {
+      console.error("Token score too low");
+      return new Response(
+        JSON.stringify({
+          error: "Token score too low",
+        }),
+        { status: 500 }
+      );
+    }
 
     // Log the received data to check if we got it correctly
     console.log("Received message:", { name, email, message, subject });
