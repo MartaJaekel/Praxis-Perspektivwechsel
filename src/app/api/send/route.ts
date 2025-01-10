@@ -13,10 +13,7 @@ export async function POST(request: Request) {
     // Send the email using the Resend API
     const { data, error } = await resend.emails.send({
       from: name + " " + "<form@praxis-perspektivwechsel.berlin>",
-      to: [
-        "guelfirat@praxis-perspektivwechsel.berlin",
-        "andrea.kompatzki@praxis-perspektivwechsel.berlin",
-      ],
+      to: process.env.CONTACT_FORM_TO?.split(",") || [],
       subject: subject,
       replyTo: email,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
