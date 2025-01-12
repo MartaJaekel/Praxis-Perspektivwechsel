@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation/Navigation";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -77,6 +78,14 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
     },
   ];
   return (
+    <>
+    <Head>
+      <title>Praxis Perspektivwechsel</title>
+      <meta name="description" content="Praxis Perspektivwechsel: Einzeltherapie, Paarberatung und Coaching in Berlin. Entdecken Sie neue Perspektiven für persönliche und berufliche Herausforderungen. Jetzt Beratung anfragen!" />
+      <link rel="canonical" href="https://www.praxis-perspektivwechsel.de/" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <div className="container font-serif max-w-[1800px]">
       <main>
         <div
@@ -89,8 +98,8 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
           <Navigation />
 
           <div className="max-w-xs mx-auto h-[40vh]">
-            <p className=" font-serif text-lg leading-6 text-[#595959] italic ">
-              Jedes Ding hat drei Seiten: eine, die Du siehst, eine, die ich
+            <p className=" font-serif text-lg leading-6 text-[#3a3939] italic ">
+             Jedes Ding hat drei Seiten: eine, die Du siehst, eine, die ich
               sehe und eine, die wir beide nicht sehen. <br />
               <span className="mt-4">
                 <strong>Chinesische Weisheit</strong>
@@ -146,11 +155,12 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
                       height={20}
                       width={20}
                       className="absolute right-0 bottom-[21px]"
+                      alt="plus"
                     ></img>
                   </div>
                   {activeIndex === index && (
                     <div className=" pt-2 text-gray-600 flex flex-col gap-4 pb-3">
-                      <img src={service.image} className="" />
+                      <img src={service.image} alt="service-image" />
                       <p className="py-5">{service.content}</p>
                     </div>
                   )}
@@ -276,5 +286,8 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
       </main>
       <Footer />
     </div>
+    </>
   );
+  
 }
+
