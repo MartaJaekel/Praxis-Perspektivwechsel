@@ -104,7 +104,7 @@ export default function Contact() {
                     className="flex items-start space-x-2 text-white/80 hover:text-white transition-colors group"
                   >
                     <Mail className="h-5 w-5 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
-                    <span className="break-all">E-mail: {contact.email}</span>
+                    <span className="break-words">E-mail: {contact.email}</span>
                   </a>
                 </div>
               </div>
