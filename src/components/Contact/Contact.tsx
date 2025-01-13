@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Script from "next/script";
+import { Mail, Phone, MapPin, Train, Bus } from "lucide-react";
 
 declare global {
   interface Window {
@@ -59,7 +60,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="kontakt" className="p-8 lg:p-32 bg-[#c56b00] gap-8">
+    <section id="kontakt" className="p-8 lg:p-32 bg-gradient-to-r  from-[#b45827] to-[#d47b38] gap-8">
       <Script
         src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
         strategy="afterInteractive"
@@ -71,26 +72,49 @@ export default function Contact() {
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-28 lg:mt-8">
           <div className="lg:w-1/2">
-            <p className="text-lg text-white mb-6">
-              Vereinbaren Sie ein kostenloses Erstgespräch (ca. 45 Min). <br />
-              Wir freuen uns auf Ihren Anruf oder auf Ihre Mail.
-            </p>
-
-            {/* Contact Information */}
-            <h3 className="font-semibold text-[#FFFFFF]">Andrea Kompatzki</h3>
-            <p className="text-[#FFFFFF]">Tel: 0177 838 2423</p>
-            <p className="mb-4 text-[#FFFFFF]">
-              E-mail: andrea.kompatzki@praxis-perspektivwechsel.berlin
-            </p>
-
-            <h3 className="font-semibold text-[#FFFFFF]">Levent Gülfirat</h3>
-            <p className="text-[#FFFFFF]">Tel: 0177 939 0564</p>
-            <p className="mb-4 text-[#FFFFFF]">
-              E-mail: guelfirat@praxis-perspektivwechsel.berlin
-            </p>
+            {[
+              {
+                name: "Andrea Kompatzki",
+                phone: "0177 838 2423",
+                email: "andrea.kompatzki@praxis-perspektivwechsel.berlin",
+              },
+              {
+                name: "Levent Gülfirat",
+                phone: "0177 939 0564",
+                email: "guelfirat@praxis-perspektivwechsel.berlin",
+              },
+            ].map((contact) => (
+              <div
+                key={contact.name}
+                className="p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 mb-5"
+              >
+                <h3 className="text-2xl font-bold mb-4 text-white">
+                  {contact.name}
+                </h3>
+                <div className="space-y-3">
+                  <a
+                    href={`tel:${contact.phone.replace(/\s/g, "")}`}
+                    className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors group"
+                  >
+                    <Phone className="h-5 w-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                    <span>Tel: {contact.phone}</span>
+                  </a>
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="flex items-start space-x-2 text-white/80 hover:text-white transition-colors group"
+                  >
+                    <Mail className="h-5 w-5 flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
+                    <span className="break-all">E-mail: {contact.email}</span>
+                  </a>
+                </div>
+              </div>
+            ))}
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-20 md:mt-30">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-4 mt-20 md:mt-30"
+            >
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ">
                 <div className="flex flex-col ">
                   <label className="text-sm font-semibold text-[#FFEEDB] mb-1">
@@ -185,33 +209,39 @@ export default function Contact() {
           {/* Address and Map */}
           <div className="lg:w-1/2 flex flex-col gap-8">
             {/* Address Information */}
-            <div className="flex flex-col p-4">
-                <h2 className="text-2xl text-[#fafafa] mb-4 font-extrabold">ADRESSE</h2>
-              <p className="text-lg text-[#FFEEDB] flex items-center gap-2 mb-2">
-                Praxis Samson
-              </p>
-              <p className="text-lg text-[#FFEEDB] flex items-center gap-2 mb-2">
-                Odenwaldstraße 23
-              </p>
-              <p className="text-lg text-[#FFEEDB] flex items-center gap-2 mb-4">
-                12161 Berlin
-              </p>
-              <p className="text-lg text-[#FFEEDB] flex items-center gap-2 mb-4">
-                Linker Eingang, Erdgeschoss
-              </p>
+            <section className="w-full py-12">
+      <div className="container px-4 max-w-3xl mx-auto text-white/90">
+        <h2 className="text-3xl font-bold mb-8 text-white">ADRESSE</h2>
+        
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-xl font-semibold text-white">Praxis Samson</h3>
+            <a 
+              href="https://maps.google.com/?q=Odenwaldstraße+23,+12161+Berlin"
+              className="hover:text-white block mt-2"
+            >
+              <MapPin className="w-4 h-4 inline mr-2" />
+              Odenwaldstraße 23
+              <br />
+              <span className="ml-6">12161 Berlin</span>
+            </a>
+            <p className="mt-2 ml-6">Linker Eingang, Erdgeschoss</p>
+          </div>
 
-              <div>
-                <h3 className="font-extrabold text-lg text-[#FFEEDB] mb-2">
-                  Öffentliche Verkehrsmittel:
-                </h3>
-                <p className="text-lg text-[#FFEEDB] flex items-center gap-2 mb-2">
-                  U-Bahn U3, Station Podbielskiallee
-                </p>
-                <p className="text-lg text-[#FFEEDB] flex items-center gap-2 mb-2">
-                  Bus 285, Station Curtiusstraße
-                </p>
-              </div>
-            </div>
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-2">Öffentliche Verkehrsmittel:</h3>
+            <p className="flex items-center gap-2 mb-2">
+              <Train className="w-4 h-4" />
+              U-Bahn U3, Station Podbielskiallee
+            </p>
+            <p className="flex items-center gap-2">
+              <Bus className="w-4 h-4" />
+              Bus 285, Station Curtiusstraße
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
             {/* Map */}
             <div className="w-full">
