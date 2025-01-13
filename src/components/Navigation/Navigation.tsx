@@ -24,31 +24,56 @@ export default function Navigation() {
   const handleLinkClick = (href: string) => {
     setIsOpen(false);
     setTimeout(() => {
-      router.push(href); 
-    }, 300); 
+      router.push(href);
+    }, 300);
   };
 
   return (
     <header className="flex justify-between w-full p-8">
-      <h1 className="text-[1.5rem] text-gray-800 text-left md:text-3xl lg:text-4xl font-">
+      <h1 className="text-[1.5rem] text-gray-800 text-left md:text-3xl lg:text-4xl">
         <strong> PRAXIS</strong> <br /> PERSPEKTIVWECHSEL
       </h1>
       <NavigationMenu className="hidden md:hidden lg:flex">
         <NavigationMenuList className="flex space-x-4">
           <NavigationMenuItem>
-            <NavigationMenuLink href="/">Home</NavigationMenuLink>
+            <NavigationMenuLink
+              href="/"
+              className="text-lg lg:text-xl px-4 py-2"
+            >
+              Home
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/about">Über Uns</NavigationMenuLink>
+            <NavigationMenuLink
+              href="/about"
+              className="text-lg lg:text-xl px-4 py-2"
+            >
+              Über Uns
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/#angebote">Angebote</NavigationMenuLink>
+            <NavigationMenuLink
+              href="/#angebote"
+              className="text-lg lg:text-xl px-4 py-2"
+            >
+              Angebote
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/#kontakt">Kontakt</NavigationMenuLink>
+            <NavigationMenuLink
+              href="/#kontakt"
+              className="text-lg lg:text-xl px-4 py-2"
+            >
+              Kontakt
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/#preise">Preise</NavigationMenuLink>
+            <NavigationMenuLink
+              href="/#preise"
+              className="text-lg lg:text-xl px-4 py-2"
+            >
+              Preise
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
@@ -58,7 +83,7 @@ export default function Navigation() {
         <SheetTrigger className="flex lg:hidden absolute right-3 top-2">
           <img src="/svg/menu.svg" height={30} width={30} alt="menu" />
         </SheetTrigger>
-        <SheetContent className="bg-[#d9963e] flex flex-col items-center justify-center">
+        <SheetContent className="bg-gradient-to-r from-[#d28956] to-[#ffcc80] flex flex-col items-center justify-center">
           <SheetHeader>
             <SheetTitle></SheetTitle>
             <SheetDescription>
@@ -67,15 +92,15 @@ export default function Navigation() {
                   <NavigationMenuItem>
                     <NavigationMenuLink
                       onClick={() => handleLinkClick("/")}
-                      className="text-lg text-white">
-                    
+                      className="text-2xl text-white"
+                    >
                       Home
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <NavigationMenuLink
                       onClick={() => handleLinkClick("/about")}
-                   className="text-lg text-white"
+                      className="text-2xl text-white"
                     >
                       Über Uns
                     </NavigationMenuLink>
@@ -83,7 +108,7 @@ export default function Navigation() {
                   <NavigationMenuItem>
                     <NavigationMenuLink
                       onClick={() => handleLinkClick("/#angebote")}
-                    className="text-lg text-white"
+                      className="text-2xl text-white"
                     >
                       Angebote
                     </NavigationMenuLink>
@@ -91,7 +116,7 @@ export default function Navigation() {
                   <NavigationMenuItem>
                     <NavigationMenuLink
                       onClick={() => handleLinkClick("/#kontakt")}
-                      className="text-lg text-white"
+                      className="text-2xl text-white"
                     >
                       Kontakt
                     </NavigationMenuLink>
@@ -99,7 +124,7 @@ export default function Navigation() {
                   <NavigationMenuItem>
                     <NavigationMenuLink
                       onClick={() => handleLinkClick("/#preise")}
-                  className="text-lg text-white"
+                      className="text-2xl text-white"
                     >
                       Preise
                     </NavigationMenuLink>
