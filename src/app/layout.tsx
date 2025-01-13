@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     siteName: "Praxis Perspektivwechsel",
     url: "https://praxis-perspektivwechsel.de",
     locale: "de_DE",
+    images: [{
+      url: "https://praxis-perspektivwechsel.de/g.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Praxis Perspektivwechsel",
+    },
+  ]
 }};
 
 export default function RootLayout({

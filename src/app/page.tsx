@@ -20,6 +20,7 @@ const websiteStructureData: WithContext<WebSite> = {
     "Coaching",
   ],
   url: "https://www.praxis-perspektivwechsel.de/",
+  image: "/images/g.jpg",
 };
 
 export default function Home() {
@@ -117,7 +118,7 @@ Themen unserer gemeinsamen Arbeit können sein: Umgang mit der Pubertät, Schulp
 
             <main className=" py-24">
               <div className="max-w-2xl ml-auto">
-                <blockquote className=" text-black text-[1.3rem] font-light  italic md:text-3xl leading-loose">
+                <blockquote className=" text-black text-[1.2rem] font-light  italic md:text-3xl leading-loose">
                   Jedes Ding hat drei Seiten: eine,
                   <br />
                   die Du siehst, eine, die ich sehe
