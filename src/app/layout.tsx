@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://praxis-perspektivwechsel.de",
     locale: "de_DE",
     images: [{
-      url: "https://praxis-perspektivwechsel.de/g.jpg",
+      url: "images/g.jpg",
       width: 1200,
       height: 630,
       alt: "Praxis Perspektivwechsel",
