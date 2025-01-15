@@ -23,7 +23,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Praxis Perspektivwechsel",
-  description: "Praxis Perspektivwechsel ist eine Praxis spezialisiert auf Einzeltherapie, Paarberatung, Familientherapie und Coaching in Berlin",
+  description: "Praxis für Einzeltherapie, Paarberatung, Familientherapie und Coaching in Berlin",
   openGraph: {
     type: "website",
     title: "Meta Tags",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://praxis-perspektivwechsel.de",
     locale: "de_DE",
     images: [{
-      url: "images/g.jpg",
+      url: "https://praxis-perspektivwechsel.de/g.jpg",
       width: 1200,
       height: 630,
       alt: "Praxis Perspektivwechsel",
