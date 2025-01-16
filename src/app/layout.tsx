@@ -24,6 +24,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Praxis Perspektivwechsel",
   description: "Praxis für Einzeltherapie, Paarberatung, Familientherapie und Coaching in Berlin",
+  keywords: ["Systemische Therapie", "Paarberatung", "Familientherapie", "Coaching", "Berlin", "Praxis"],
   openGraph: {
     type: "website",
     title: "Meta Tags",
