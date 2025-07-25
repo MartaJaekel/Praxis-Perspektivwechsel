@@ -215,28 +215,25 @@ export default function Contact() {
         
         <div className="space-y-6">
           <div>
-            <h3 className="text-xl font-semibold text-white">Praxis Samson</h3>
+        
             <a 
               href="https://maps.google.com/?q=Odenwaldstraße+23,+12161+Berlin"
               className="hover:text-white block mt-2"
             >
               <MapPin className="w-4 h-4 inline mr-2" />
-              Odenwaldstraße 23
+          Reinacher Zeile 20
               <br />
-              <span className="ml-6">12161 Berlin</span>
+              <span className="ml-6">12205 Berlin</span>
             </a>
-            <p className="mt-2 ml-6">Linker Eingang, Erdgeschoss</p>
+            
           </div>
 
           <div>
             <h3 className="text-xl font-semibold text-white mb-2">Öffentliche Verkehrsmittel:</h3>
-            <p className="flex items-center gap-2 mb-2">
-              <Train className="w-4 h-4" />
-              U-Bahn U3, Station Podbielskiallee
-            </p>
+            
             <p className="flex items-center gap-2">
               <Bus className="w-4 h-4" />
-              Bus 285, Station Curtiusstraße
+              Bus 285,  Station Engadiner Weg
             </p>
           </div>
         </div>
@@ -247,7 +244,7 @@ export default function Contact() {
             <div className="w-full">
               <iframe
                 title="Google Maps"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4861.234987695652!2d13.322962698623302!3d52.467954481341756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8507f27eddf6f%3A0xd6ba64517dd1896f!2sOdenwaldstra%C3%9Fe%2023%2C%2012161%20Berlin!5e0!3m2!1sde!2sde!4v1736255700820!5m2!1sde!2sde"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.9244070845707!2d13.297173577303894!3d52.42616737203665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a85affecc63a75%3A0x59e38d8282e6207a!2sReinacher%20Zeile%2020%2C%2012205%20Berlin!5e0!3m2!1sit!2sde!4v1753433100717!5m2!1sit!2sde"
                 width="100%"
                 height="400"
                 loading="lazy"
